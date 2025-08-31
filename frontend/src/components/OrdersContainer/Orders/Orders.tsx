@@ -43,14 +43,7 @@ const Orders = () => {
 
     const [flag, setFlag] = useAppContext();
 
-    console.log("flag", flag)
     useEffect(() => {
-            // if (debouncedSearchTerm.debouncedValue) {
-            //     dispatch(orderActions.getAll({query: debouncedSearchTerm.debouncedValue}))
-            // } else {
-            //     dispatch(orderActions.getAll({query: search}))
-            // }
-
         const fetchData = async () => {
                 if (debouncedSearchTerm.debouncedValue) {
                     if (flag) {
@@ -79,7 +72,7 @@ const Orders = () => {
 
         fetchData();
     }, [debouncedSearchTerm.debouncedValue, trigger, orderTrigger]);
-    console.log(isLoading, createCommentAction)
+
     return (
         <div className={css.main_page_div}>
 

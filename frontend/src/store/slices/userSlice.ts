@@ -9,7 +9,6 @@ interface IState {
     limit: number
     page: number
     userTrigger: boolean
-    createError: string
 }
 
 const initialState: IState = {
@@ -17,8 +16,7 @@ const initialState: IState = {
     total: null,
     limit: null,
     page: null,
-    userTrigger: false,
-    createError: null,
+    userTrigger: false
 }
 
 const getAllManagers = createAsyncThunk<IManagerRes, {query: string}>(

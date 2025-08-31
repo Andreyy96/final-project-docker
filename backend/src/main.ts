@@ -41,6 +41,7 @@ const dbConnection = async () => {
     while (!dbCon) {
         try {
             console.log("Connecting to DB...");
+            console.log(configs.MONGO_URI);
             await mongoose.connect(configs.MONGO_URI);
             dbCon = true;
             console.log("Database available!!!");

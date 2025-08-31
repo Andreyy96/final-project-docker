@@ -60,14 +60,18 @@ $ cd ..
 
 ## Env File
 
-- all configurations are in the main folder in the backend/.env file
+- all configurations are in the main folder in the .env file
+- all configurations for mongodb are in the main folder in the .env.db file
 
 ## Running the app
 
 ```bash
-#backend
-$ start:dev
+#build frontend directory in client directory
+$ cd frontend
+$ npm run build
+$ cd ..
 
-#fronted
-$ dev
+#dockerize the project
+$ docker compose build
+$ docker compose up
 ```

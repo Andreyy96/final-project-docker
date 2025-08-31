@@ -1,7 +1,6 @@
 import dayjs from "dayjs";
 
 import { StatusEnum } from "../enums/status.enum";
-import { UserRoleEnum } from "../enums/user-role.enum";
 import { IQuery } from "../interfaces/query.interface";
 import { IUser, IUserWithStatistic } from "../interfaces/user.interface";
 import { User } from "../models/user.model";
@@ -134,7 +133,7 @@ class UserRepository {
   }
 
   public async getLustUser(): Promise<IUser[]> {
-    return await User.find({ role: UserRoleEnum.MANAGER })
+    return await User.find()
       .sort({ id: -1 })
       .limit(1);
   }

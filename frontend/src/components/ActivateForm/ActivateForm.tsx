@@ -44,7 +44,7 @@ const ActivateForm = () => {
                     {visibleConfirmPassword ? <VisibilityOff onClick={() => setVisibleConfirmPassword(false)}/> :  <Visibility onClick={() => setVisibleConfirmPassword(true)}/>}
                 </label>
                 {errors.confirm_password && <p>{errors.confirm_password.message}</p>}
-                {passwordError && <p>{passwordError}</p>}
+                {passwordError && <p>{passwordError.message}</p>}
                 <button>Confirm</button>
             </form>
         </div>

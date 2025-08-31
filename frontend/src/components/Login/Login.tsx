@@ -45,16 +45,11 @@ const Login = () => {
                 }
                 {errors.email && <p>{errors.email.message}</p>}
                 <label className={css.labelPassword} htmlFor={"password"}> Password
-                {/*{errors.password ?*/}
-                {/*    <input className={`${css.redBorder}`} id={"password"} type="password" placeholder={'password'} {...register('password')}/>*/}
-                {/*    :*/}
-                {/*    <input id={"password"} type="password" placeholder={'password'} {...register('password')}/>*/}
-                {/*}*/}
                 <input className={errors.password && css.redBorder} id={"password"} type={visiblePassword ? "text" : "password"} placeholder={'password'} {...register('password')}/>
                 {visiblePassword ? <VisibilityOff onClick={() => setVisiblePassword(false)}/> :  <Visibility onClick={() => setVisiblePassword(true)}/>}
                 </label>
                 {errors.password && <p>{errors.password.message}</p>}
-                {loginError && <p>{loginError}</p>}
+                {loginError && <p>{loginError.message}</p>}
                 <button>{isLoading ? "LOADING..." : "LOGIN"}</button>
             </form>
         </div>

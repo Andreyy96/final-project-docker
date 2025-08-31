@@ -1,4 +1,5 @@
 .idea
 dist
 node_modules
-.env
+final-project-docker.iml
+mongo_db

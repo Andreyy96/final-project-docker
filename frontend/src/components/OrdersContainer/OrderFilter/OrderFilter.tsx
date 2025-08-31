@@ -1,5 +1,5 @@
 import {SubmitHandler, useForm} from "react-hook-form";
-import {useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 import {IQueryFilterOrder} from "../../../interfaces/order.interface";
 import {useAppSelector} from "../../../hooks/useAppSelector";
 import {useEffect, useState} from "react";
@@ -19,6 +19,8 @@ const OrderFilter = () => {
     const [endTrigger, setEndTrigger] = useState<boolean>(false)
     const {groups, groupTrigger} = useAppSelector(state => state.group)
     const dispatch = useAppDispatch()
+    const searchParams = new URLSearchParams();
+    const navigate = useNavigate()
 
 
     const {currentUser} = useAppSelector(state => state.auth)
@@ -93,16 +95,27 @@ const OrderFilter = () => {
         }
     }, [query, setValue, groupTrigger]);
 
-    const setQ: SubmitHandler<IQueryFilterOrder> = async (queries) => {
+    let queryString: string
+    const setQ: SubmitHandler<IQueryFilterOrder> = (queries) => {
+
         for (const element in queries) {
             // @ts-expect-error
             if (queries[element] && !queries[element].includes("all")) {
-                setQuery(prev => {
-                    // @ts-expect-error
-                    prev.set(element, queries[element])
-                    prev.delete("page")
-                    return prev
-                })
+                // setQuery(prev => {
+                //     const searchParams = new URLSearchParams(prev)
+                //     // @ts-ignore
+                //     searchParams.set(element, queries[element])
+                //     searchParams.delete("page")
+                //     // prev.set(element, queries[element])
+                //     // prev.delete("page")
+                //     return searchParams
+                // })
+                searchParams.delete(element)
+                searchParams.delete("page")
+                // @ts-ignore
+                searchParams.set(element, queries[element])
+
+                queryString = searchParams.toString();
             } else {
                 setQuery(prev => {
                     prev.delete(element)
@@ -110,7 +123,11 @@ const OrderFilter = () => {
                 })
             }
         }
+        console.log(queryString)
+        return navigate(queryString ? `/orders?${queryString}`: "/orders")
+
     }
+
     const resetTab = () => {
         reset()
         setQuery(prev => {
@@ -143,19 +160,21 @@ const OrderFilter = () => {
         <div className={css.main_div}>
             <form className={css.main_filter_div} name={"filter_order"} onChange={handleSubmit(setQ)}>
                 <div className={css.form_input}>
-                    <input type="text" placeholder={'Name'} {...register('name')}/>
-                    <input type="text" placeholder={'Surname'} {...register('surname')}/>
-                    <input type="text" placeholder={'Email'} {...register('email')}/>
-                    <input type="text" placeholder={'Phone'} {...register('phone')}/>
-                    <input type="text" placeholder={'Age'} {...register('age')}/>
-                    <select name="course" {...register("course")}>
+                    <label>
+                    <input type="text" placeholder={'Name'} name='name'  {...register('name')}/>
+                    </label>
+                    <input type="text" placeholder={'Surname'} name='surname'  {...register('surname')}/>
+                    <input type="text" placeholder={'Email'} name='email' {...register('email')}/>
+                    <input type="text" placeholder={'Phone'} name='phone' {...register('phone')}/>
+                    <input type="text" placeholder={'Age'} name='age' {...register('age')}/>
+                    <select name="course"  {...register("course")}>
                         <option value="">all courses</option>
                         <option value="FS">FS</option>
                         <option value="QACX">QACX</option>
                         <option value="JCX">JCX</option>
                         <option value="JSCX">JSCX</option>
                         <option value="FE">FE</option>
-                        <option value="PCX">PCX</option>
+                        <option value="PCdX">PCX</option>
                     </select>
                     <select name="course_format" {...register("course_format")}>
                         <option value="">all formats</option>
@@ -196,7 +215,6 @@ const OrderFilter = () => {
                     </label>
                     <button className={css.button_reset} formAction={resetTab}><Replay className={css.svg_reload}/>
                     </button>
-                    {/*<button formAction={createExcel}><UploadFile/></button>*/}
                 </div>
             </form>
             <button onClick={createExcel}><UploadFile/></button>

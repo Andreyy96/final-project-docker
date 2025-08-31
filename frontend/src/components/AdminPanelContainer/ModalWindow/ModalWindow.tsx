@@ -78,7 +78,7 @@ const ModalWindow = () => {
                                 {errors.surname && <p>{errors.surname.message}</p>}
                             </label>
                         </div>
-                        {createManagerError && <p>{createManagerError}</p>}
+                        {createManagerError && <p>{createManagerError.message}</p>}
                         <div className={css.button_container}>
                             <button className={css.button_item} onClick={handleClose}>CANCEL</button>
                             <button className={css.button_item}>CREATE</button>

@@ -5,9 +5,9 @@ import {authService} from "../../services/authService";
 import {IPassword} from "../../interfaces/password.interface";
 
 interface IState {
-    loginError: string
-    passwordError: string
-    createManagerError: string
+    loginError: { status: number, message: string }
+    passwordError: { status: number, message: string }
+    createManagerError: { status: number, message: string }
     currentUser: IUser
     createUserTrigger: boolean
 }
@@ -128,16 +128,16 @@ const authSlice = createSlice({
             state.currentUser = action.payload
         })
         .addCase(login.rejected, (state, action) => {
-            state.loginError = action.payload as string
+            state.loginError = action.payload as { status: number, message: string }
         })
         .addCase(activateAccount.rejected, (state, action) => {
-            state.passwordError = action.payload as string
+            state.passwordError = action.payload as { status: number, message: string }
         })
         .addCase(recoveryPassword.rejected, (state, action) => {
-            state.passwordError = action.payload as string
+            state.passwordError = action.payload as { status: number, message: string }
         })
         .addCase(signUpManager.rejected, (state, action) => {
-            state.createManagerError = action.payload as string
+            state.createManagerError = action.payload as { status: number, message: string }
         })
         .addCase(me.fulfilled, (state, action) => {
             state.currentUser = action.payload
