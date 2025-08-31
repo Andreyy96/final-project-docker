@@ -1,0 +1,53 @@
+.button_create {
+    border-radius: 0;
+    width: 90px;
+    margin-left: 90px;
+    color: white;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    bgcolor: background.paper;
+    border: 2px solid #000;
+    boxShadow: 24;
+    p: 4;
+    background: white;
+    border: none;
+    border-radius: 5%;
+    padding: 15px;
+}
+
+.form_item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 5px;
+}
+
+.form_input {
+    width: 60px;
+}
+
+.border_red {
+    border: 1px solid red;
+}
+
+.wight {
+    width: 50px;
+}
+
+.button_container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 20px 10px 0;
+}
+
+.button_item {
+    width: 80px;
+    color: white;
+}

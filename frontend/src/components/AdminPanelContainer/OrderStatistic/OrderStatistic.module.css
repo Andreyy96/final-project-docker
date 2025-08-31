@@ -1,0 +1,16 @@
+.statistic_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-direction: column;
+    margin-top: 6px;
+}
+
+.statistic {
+    display: flex;
+}
+
+.statistic_container p{
+    font-size: 16px;
+}

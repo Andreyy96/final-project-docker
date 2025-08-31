@@ -1,0 +1,9 @@
+.commentDiv {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: black solid 1px;
+}
+
+p {
+    margin: 3px;
+}

@@ -1,0 +1,61 @@
+.svg_reload {
+    width: 26px !important;
+    height: 26px !important;
+}
+.main_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.main_filter_div {
+    display: flex;
+}
+
+.form_input {
+    width: 1370px;
+}
+
+.form_input input{
+    width: 175px;
+    margin: 5px 10px 5px 10px;
+}
+
+.form_input select{
+    width: 208px;
+    margin: 5px 10px 5px 10px;
+}
+
+.form_input_data{
+    width: 165px;
+}
+
+.form_input_checkbox{
+    width: 20px;
+    height: 20px;
+}
+
+.form_button_div  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.button_reset {
+    border-radius: 25%;
+}
+
+.form_button_div button {
+    padding: 8.5px;
+}
+
+
+.form_button_div a {
+    background: #76b852;
+    padding: 8px;
+    border-radius: 25%;
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,27 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background: #76b852;
+    color: #fff;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.main_page_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.loader_div {
+    padding-top: 50px;
+}

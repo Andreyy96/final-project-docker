@@ -1,0 +1,91 @@
+.edit {
+    width: 50px;
+    color: white;
+}
+
+.margin_top {
+    margin-top: 28px;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 880px;
+    bgcolor: background.paper;
+    border: 2px solid #000;
+    boxShadow: 24;
+    p: 4;
+    background: white;
+    border: none;
+    border-radius: 5%;
+
+}
+
+.updateForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.form_item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 5px;
+}
+
+.box input {
+    width: 380px;
+}
+
+.box select {
+    width: 415px;
+}
+
+.button_container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    width: 100%;
+    margin: 0 20px 10px 0;
+}
+
+.button_group_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.button_group_container button{
+    width: 50%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_add {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_window {
+    height: 100vh !important;
+    overflow: scroll;
+}
+
+.border_red {
+    border: 2px solid red;
+}
+
+button.edit:disabled{
+    display: block;
+    background: gray !important;
+}
+
+

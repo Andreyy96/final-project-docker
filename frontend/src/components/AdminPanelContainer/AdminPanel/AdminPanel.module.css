@@ -1,0 +1,13 @@
+.admin_panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.loader_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

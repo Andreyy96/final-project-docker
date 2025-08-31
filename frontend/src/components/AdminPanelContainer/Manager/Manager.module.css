@@ -1,0 +1,28 @@
+.manager_main_div {
+    display: flex;
+    border: 3px solid green;
+    width: 1340px;
+}
+
+.user_info_div {
+    width: 250px;
+}
+
+.statistic_div {
+    width: 110px;
+}
+
+.statistic_div p {
+    margin-top: 5px;
+}
+
+.buttons_div {
+}
+
+.buttons_div button {
+    border-radius: 0;
+    background: darkgreen;
+    color: white;
+    margin-left: 15px;
+    margin-top: 15px;
+}

@@ -1,0 +1,59 @@
+[{
+  "_id": {
+    "$oid": "68a8e96c00a78b0d4292dd4f"
+  },
+  "id": 1,
+  "name": "admin",
+  "surname": "adminov",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$Ze6sjpqHjEXMv0CDc4FpyuTr0eRkGVaLLKWaflXbl1Nc78zxkjdvi",
+  "role": "admin",
+  "is_active": true,
+  "last_login": "August 28, 2025",
+  "is_banned": false,
+  "createdAt": {
+    "$date": "2025-08-22T22:04:28.868Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-28T08:06:28.117Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68a9b0f599828bef6610af6c"
+  },
+  "id": 2,
+  "name": "Sui",
+  "surname": "Kuneda",
+  "email": "test@gmail.com",
+  "role": "manager",
+  "is_active": true,
+  "last_login": "August 23, 2025",
+  "is_banned": false,
+  "createdAt": {
+    "$date": "2025-08-23T12:15:49.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-23T12:17:39.168Z"
+  },
+  "password": "$2b$10$2p4/uWF7Hl/d41/W5.N2keBgxySRv15l1ROAIirsA5qJ4KlsKQ/MS"
+},
+{
+  "_id": {
+    "$oid": "68a9b11e99828bef6610af97"
+  },
+  "id": 3,
+  "name": "Ron",
+  "surname": "Yuzli",
+  "email": "test2@gmail.com",
+  "role": "manager",
+  "is_active": false,
+  "last_login": null,
+  "is_banned": false,
+  "createdAt": {
+    "$date": "2025-08-23T12:16:30.529Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-23T12:16:30.529Z"
+  }
+}]

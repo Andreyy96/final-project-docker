@@ -1,0 +1,70 @@
+.loginPage {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #76b852;
+    min-height: 100vh;
+    gap: 7px;
+}
+
+.loginForm {
+    display: flex;
+    gap: 10px;
+    padding: 30px;
+    background: white;
+    flex-direction: column;
+}
+
+input.redBorder {
+    border: 2px solid red;
+}
+
+input {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    background: lightgray;
+    outline: none;
+}
+
+select {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    background: lightgray;
+    outline: none;
+    width: 195px;
+}
+
+button {
+    padding: 10px;
+    background: #76b852;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.sessionExpirationDiv {
+    padding: 5px;
+    background-color: white;
+}
+
+.sessionExpirationDiv p{
+    font-size: 18px;
+    color: red;
+}
+
+.labelPassword {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+    width: 250px;
+}
+
+.labelPassword svg {
+    position: absolute;
+    top: 35px;
+    right: 7px;
+}

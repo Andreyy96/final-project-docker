@@ -1,0 +1,21 @@
+export interface IConfig {
+  APP_PORT: string | number;
+  APP_HOST: string;
+  FRONT_URL: string;
+
+  MONGO_URI: string;
+
+  JWT_ACCESS_SECRET: string;
+  JWT_ACCESS_EXPIRATION: any;
+  JWT_REFRESH_SECRET: string;
+  JWT_REFRESH_EXPIRATION: any;
+
+  ACTION_RECOVERY_PASSWORD_SECRET: string;
+  ACTION_RECOVERY_PASSWORD_EXPIRATION: any;
+  ACTION_ACTIVATE_SECRET: string;
+  ACTION_ACTIVATE_EXPIRATION: any;
+
+  SMTP_EMAIL: string;
+  SMTP_PASSWORD: string;
+  HASH_ROUNDS: string;
+}

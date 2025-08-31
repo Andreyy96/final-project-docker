@@ -1,0 +1,36 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    background-color: green;
+    color: snow;
+}
+
+.div_logo {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.div_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    margin-right: 70px;
+    gap: 5px;
+}
+
+.div_info p{
+    font-size: 24px;
+    color: white;
+}
+
+.div_info button{
+    margin-right: 10px;
+}
+
+
+.tools{
+    display: flex;
+}
